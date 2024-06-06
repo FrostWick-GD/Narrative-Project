@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4377714253407572351}
   - component: {fileID: 1416278208390150616}
   m_Layer: 0
-  m_Name: IO_Door
+  m_Name: IO_Door 1
   m_TagString: InteractableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

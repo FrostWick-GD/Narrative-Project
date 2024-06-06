@@ -6,7 +6,7 @@ using UnityEngine.ProBuilder.Shapes;
 
 public class ItemDoor : MonoBehaviour, IInteractable
 {
-    [Header("Références - Ne pas modifier")]
+    [Header("Rï¿½fï¿½rences - Ne pas modifier")]
     public GameObject doorMesh;
 
     [System.Serializable]
@@ -25,7 +25,7 @@ public class ItemDoor : MonoBehaviour, IInteractable
         SwitchOnly
     }
 
-    [Header("Paramètres")]
+    [Header("Paramï¿½tres")]
     public statusData[] statusList;
 
     public bool isClosedAtStart = true;
@@ -115,6 +115,7 @@ public class ItemDoor : MonoBehaviour, IInteractable
                     if (keyTest)
                     {
                         UnlockDoorByKey();
+                        Application.Quit();
                     }
                     else
                     {
@@ -297,6 +298,7 @@ public class ItemDoor : MonoBehaviour, IInteractable
         {
             sfx_audioSource.clip = sfx_doorUnlockedByKey;
             sfx_audioSource.Play();
+            Application.Quit();
         }
 
         isLocked = LockStatus.NotLocked;
